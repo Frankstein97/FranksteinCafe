@@ -1,0 +1,21 @@
+/* NavBar */
+
+.container-fluid {
+    background-color: #A1CAC8;
+    padding: 20px;
+  }
+  .nav-link {
+    font-size: 20px;
+  }
+  .navbar-brand {
+    font-size: 2rem
+  }
+ .navbar-nav {
+  padding-left: 
+  50px;
+ }
+  /* CartWidget */
+.CartWidgetContainer {
+  margin: 1rem;
+  width: 2rem;
+}
