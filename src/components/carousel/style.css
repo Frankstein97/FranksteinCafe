@@ -1,0 +1,15 @@
+#carouselExampleSlidesOnly {
+    width: 95%;
+    height: 10rem;
+}
+#carouselExampleSlidesOnly img{
+    width: 100%;
+    height: auto;
+  }
+  @supports(object-fit: cover){
+      .box img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+  }

@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <>
     
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-lg-top">
   <div className="container-fluid ">
     <a className="navbar-brand me-2 " href="/#">
       <img src="https://acegif.com/wp-content/uploads/gifs/coffee-88.gif" alt="" width="90" className="d-inline-block align-text-top"/></a>

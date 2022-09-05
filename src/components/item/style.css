@@ -1,0 +1,31 @@
+.card {
+    width: 18rem;
+    margin: 2rem;
+    padding-bottom: 8px;
+    border-radius: 2%;
+    border: 2px rgb(216, 216, 216) solid;
+
+    
+}
+.card:hover{
+    background-color:#e3e3e3 !important;
+}
+.card h5 {
+      padding:0.5rem;
+      font-size: 25px ;
+  }
+
+@media only screen and (max-width: 600px) {
+    .card {
+      width: 9rem;
+        font-size: 10px ;
+        margin:8px;
+    }
+    .card h5 {
+        padding:3px;
+          font-size: 12px ;
+      }
+      .card-body {
+        padding: 1px;
+      }
+  }

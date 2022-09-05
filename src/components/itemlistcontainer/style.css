@@ -1,11 +1,7 @@
-.itemListContainer {
-    
-    width: 100%;
-}
 .itemListContainerItems {
+    background-color: red;
     justify-content: space-evenly;
     display: flex;
     align-items: stretch;
-      
     width: 100%;
 }
