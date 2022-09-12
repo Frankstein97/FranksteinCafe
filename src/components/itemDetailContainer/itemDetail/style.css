@@ -1,0 +1,40 @@
+
+.itemDetail {
+    margin: 0px 10px;
+    height: 85vh;
+}
+.item-image {
+    padding: 20px 1px;
+}
+.item-image p {
+    font-size: 1.3rem;
+text-align: center;
+margin: 2rem;
+}
+.badge {
+    font-size: 1.1rem;
+}
+.item-title {
+    font-size: 4em;
+    padding: 20px 0px;
+}
+.item-price {
+    font-size: 3rem;
+}
+.card-description {
+    margin: 1.8rem 0rem;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+.itemCountContainer {
+    position: relative;
+
+}
+.itemCountContainer_botons {
+
+  position: absolute;
+}
