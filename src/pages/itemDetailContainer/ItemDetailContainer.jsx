@@ -1,50 +1,33 @@
 import './style.css'
 import { useState, useEffect } from 'react';
-// import ItemDetail from '../../components/itemDetail/ItemDetail'
-// import getFetch from '../../components/MockProductos'
+import ItemDetailList from '../../components/ItemDetailList/ItemDetailList'
 import { useParams } from 'react-router-dom';
-import {data} from '../../components/MockFiltrados'
+import data from '../../components/MockFiltrados'
 
 
 const ItemDetailContainer = () => {
-  const {id} = useParams ();
-  const [product, setProduct] = useState ();
-// console.log (data);
-  // console.log (data);
+  const [itemDetail, setItemDetail] = useState ([]);
+  const { id } = useParams ();
+  
+    useEffect (() => {
+      getProducts.then ((response) => {
+        setItemDetail(response)
+      });
+    }, []);    
 
-const getProduct = () => {
-  const dataFiltrada = data.filter(product => product.id === id)
-  console.log (...dataFiltrada);
-  setProduct (...dataFiltrada)
- 
-};
-
-
-  useEffect (() => {
-    getProduct ();
-  }, []);    
-
-// const [data, setData] = useState([]);
-// const [loading, setLoading]=useState(true)
-
-    // useEffect (() => { 
-      // const dataFiltrada = getFetch.filter ((data) => data.id === id)
-      //   console.log (...dataFiltrada)
-      //   setData (...dataFiltrada) 
-        // getFetch(Products)
-        // .then ((resp) => setData(resp))
-        // .then ((setData) => {
-        // })
-    //     .catch (error => console.log(error))
-    //     .finally (()=>setLoading (false))
-    // }, []);
- 
+const getProducts = new Promise((resolve, reject) => {
+  setTimeout (() => {
+    resolve(data.filter((prod) => prod.id === id));
+  }, 2000)
+  
+});
+  
     return (
       <>
-          <div className='itemDetailContainer'>
+          {/* <div className='itemDetailContainer'>
             <div className='textTop'> 
              <p> ¡Si tenes alguna duda consulta primero!</p>
-            </div>
+            </div> */}
       {/* {   
        loading ? <div class="d-flex justify-content-center">
        <div class="spinner-border" role="status">
@@ -52,8 +35,8 @@ const getProduct = () => {
        </div>
     //  </div> : <ItemDetail item={data}></ItemDetail>
       } */}
-          </div>
-          {/* <ItemDetail product = {product} /> */}
+          {/* </div> */}
+          <ItemDetailList product = {itemDetail}  />
       </>
   
   )

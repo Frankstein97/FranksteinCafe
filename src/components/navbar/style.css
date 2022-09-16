@@ -13,6 +13,7 @@
   }
   
   .nav-link {
+    text-decoration: none;
     font-size: 20px;
   }
   .navbar-brand {
@@ -26,4 +27,7 @@
 .CartWidgetContainer {
   margin: 1rem;
   width: 2rem;
+}
+a {
+  text-decoration: none;
 }

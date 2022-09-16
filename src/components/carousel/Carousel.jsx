@@ -11,23 +11,23 @@ const carousel = () => {
   <div className="carousel-inner">
       <div className="carousel-item active">
           <img src="https://i.pinimg.com/originals/c8/b3/8a/c8b38a5ed6f2fb1813641a03a1ea2db3.jpg" className="d-block w-100" alt="..."/>
-          <div className="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+          <div className="carousel-caption d-none d-md-block me-3">
+            <h5>Frota el cafe molido y mira su color </h5>
+            <p>Al despertar, con la punta de tus dedos </p>
           </div>
       </div>
       <div className="carousel-item">
           <img src="https://images5.alphacoders.com/905/905439.jpg" className="d-block w-100" alt="..."/>
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+          <div className="carousel-caption d-none d-md-block me-3">
+            <h5>Senti de aroma</h5>
+            <p>Al mediodia, ingresando por la nariz  </p>
           </div>
       </div>
       <div className="carousel-item">
           <img src="https://fondosmil.com/fondo/15481.jpg" className="d-block w-100" alt="..."/>
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+          <div className="carousel-caption d-none d-md-block me-3">
+            <h5>Disfruta su sabor</h5>
+            <p>A la tarde, en el fondo del paladar</p>
           </div>
       </div>
   </div>

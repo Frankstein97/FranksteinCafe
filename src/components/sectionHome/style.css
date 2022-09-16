@@ -4,6 +4,9 @@
     margin: 80px 30px;
     height: 50vh;
 }
+.imgsection {
+    width: 300px;
+}
 .item-image {
     padding: 42px 1px;
 }
@@ -22,10 +25,7 @@ margin: 2rem;
     padding: 20px 0px;
 }
 
-.card-description {
-    margin: 1.8rem 0rem;
-    font-size: 1.4rem;
-}
+
 .badge {
     font-size: 2rem;
 }

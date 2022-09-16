@@ -1,0 +1,22 @@
+.aboutus {
+    align-items: center;
+    text-align:center;
+     margin:0 auto;
+     font-size: 22px;
+}
+.aboutus h1 {
+    font-size: 50px;
+    margin-top: 5rem;
+    padding: 1rem 3rem;
+}
+.aboutus h3 {
+    padding: 1rem 3rem;
+    background-color: #A1CAC8;
+    border-radius: 10%;
+}
+.aboutus p {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    border-radius: 10%;
+}

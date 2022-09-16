@@ -1,5 +1,6 @@
-import Item from '../item/Item';
 import './style.css'
+
+import Item from '../item/Item';
 import { Link } from 'react-router-dom';
 
 const itemList = ({ lista }) => {
@@ -9,15 +10,16 @@ const itemList = ({ lista }) => {
 
     <div className='itemList row row-cols-2 row-cols-md-3 g-4'>
       {
-       lista.map ((productss) => (
+       lista.map ((product) => (
         <Link 
-        key={productss.id}
-        to={'/detail/' + productss.id}
+        key={product.id}
+        to={'/detail/' + product.id}
+        style={{textDecoration:'none'}}
         >
           <Item 
-          title={productss.title} 
-          img={productss.img}
-          description={productss.description}
+          title={product.title} 
+          img={product.img}
+          shortdescription={product.shortdescription}
           />
         </Link>
       ))

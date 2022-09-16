@@ -3,26 +3,34 @@ import React from 'react'
 const Contact = () => {
   return (
     <>
-    <div className='m-5'>
-        <label for="basic-url" class="form-label">Nombre</label>
-        <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Fulanito" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
-        </div>
+    <form className="m-5 b-2">
+  <div className="mb-3">
+    <label className="form-label">Nombre Completo</label>
+    <input  className="form-control"/>
+  </div>
+  <div className="mb-3">
+    <label className="form-label">Asunto:</label>
+    <input  className="form-control"/>
+  </div>
 
-        <label for="basic-url" class="form-label">Tema de la consulta</label>
-        <div class="input-group mb-3">
-        <span class="input-group-text">Ref</span>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"/>
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text">Mail</span>
-        <input type="text" class="form-control" placeholder="usuarioejemplo@gmail.com" aria-label="Server"/>
-        </div>
-        <div class="input-group">
-        <span class="input-group-text">Ingrese aqui su consulta</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
-    </div>
+  <div className="mb-3">
+  <label for="exampleFormControlTextarea1" className="form-label">Dejanos tu comentario:</label>
+  <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+ 
+  <div className="mb-3">
+    <label for="exampleInputEmail1" className="form-label">Email:</label>
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+    <div id="emailHelp" className="form-text">Este formulario es a modo de prueba, los datos completados no quedaran guardados</div>
+  </div>
+  <div className="mb-3 form-check">
+    <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+    
+    <label className="form-check-label" for="exampleCheck1">Click aqui y salir</label>
+  </div>
+  <button type="submit" className="btn btn-primary">Salir</button>
+</form>
     </>     
   )
 }

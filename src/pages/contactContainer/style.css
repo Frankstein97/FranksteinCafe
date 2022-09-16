@@ -1,0 +1,27 @@
+.contactcontainer {
+    
+     margin:0 auto;
+     font-size: 22px;
+}
+.contactcontainer  .elh1, .elh2 {
+    background-color: #A1CAC8;
+    align-items: center;
+    text-align:center;
+    font-size: 50px;
+    margin-top: 5rem;
+    padding: 1rem 3rem;
+}
+.contactcontainer .elh4 {
+    align-items: center;
+    text-align:center;
+    padding: 1rem 3rem;
+    
+}
+.contactcontainer .elp {
+    align-items: center;
+    text-align:center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    border-radius: 10%;
+}

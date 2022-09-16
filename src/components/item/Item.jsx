@@ -1,6 +1,8 @@
-import React from 'react' 
 import './style.css';
-const item = ({ title,img,description,id} ) => {
+
+import React from 'react' 
+
+const item = ({ title,img,shortdescription} ) => {
   return (
 
     <>
@@ -10,7 +12,7 @@ const item = ({ title,img,description,id} ) => {
       <img src={img} className="card-img-top" alt={title}/>
       <div className="card-body">
         {/* <p class="card-text">{price}</p> */}
-        <small className="card-text">{description}</small>
+        <small className="card-text">{shortdescription}</small>
       </div>
     </div>
     

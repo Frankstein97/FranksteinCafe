@@ -2,33 +2,39 @@ import './style.css'
 import { useState } from 'react'
 
 
-const ItemDetail = ({product}) => { 
+const ItemDetail = ({title, price, description, category, stock, img }) => { 
   const [itemCount, setItemCount] = useState(0)
 
-  const add = () => itemCount < product.stock ? setItemCount (itemCount+1) :alert ("No hay stock disponible");
+
+  //TODO ESTO LO VA A TENER QUE TENER EL ITEMCOUNT AL QUE LE VOY A PASAR EL PRODUCT.STOCK COMO PROP
+  const add = () => itemCount < stock ? setItemCount (itemCount+1) :alert ("No hay stock disponible");
   const subtract = () => itemCount > 0 ? setItemCount (itemCount-1) :alert ("Elija la cantidad que desea sumar al carrito");
   let addToCart = () => itemCount > 0 ? alert (`Usted agrego ${itemCount} al carrito`) : addToCart.disabled = true;
 
 
   return (
     <>
-  <div className='itemDetail row'>
+    {/* {product.map ((product) =>  ( */}
+
+    
+
+   
     <div className='col-12 col-sm-6'>
       <div className="item-image text-center">
-        <img src={product.img} className="img-fluid rounded mx-auto d-block" alt={product.title}/>
+        <img src={img} className="img-fluid rounded mx-auto d-block" alt={title}/>
         <p>Elegi una cantidad y agregala al carrito.</p>
-        <span className="badge text-bg-warning mb-2"> Hay <strong>{product.stock}</strong> articulos en stock </span>
+        <span className="badge text-bg-warning mb-2"> Hay <strong>{stock}</strong> articulos en stock </span>
         
       </div>
     </div>
-    <div class="col-12 col-sm-6 ">
+    <div className="col-12 col-sm-6 ">
       <div className='mb-5'>
-          <h2 className="item-title">{product.title}</h2>
-          <span class="badge text-bg-primary mb-3">Envio Gratis</span>
+          <h2 className="item-title">{title}</h2>
+          <span className="badge text-bg-primary mb-3">Envio Gratis</span>
           <div className='item-info'>
-            <p className="item-price">${product.price}</p>
+            <p className="item-price">{price}</p>
           </div>
-          <p className="card-description">{product.description}</p>
+          <p className="card-description">{description}</p>
       </div>
       <div className='col-md-3 offset-md-3'>
           <span className="badge text-dark text-center mb-2"> Cantidad: <strong>{itemCount} unidades</strong> </span>
@@ -39,7 +45,9 @@ const ItemDetail = ({product}) => {
             </div>
       </div>
     </div>
-   </div>
+
+   {/* ))
+   } */}
     </>
   )
 }
