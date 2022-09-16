@@ -1,0 +1,31 @@
+
+.itemProduct {
+    border-bottom: 3px solid gray;
+    margin: 80px 30px;
+    height: 50vh;
+}
+.item-image {
+    padding: 42px 1px;
+}
+.img-fluid {
+    width: 350px;
+}
+
+.item-image p {
+    font-size: 1.3rem;
+text-align: center;
+margin: 2rem;
+}
+
+.item-title {
+    font-size: 4rem;
+    padding: 20px 0px;
+}
+
+.card-description {
+    margin: 1.8rem 0rem;
+    font-size: 1.4rem;
+}
+.badge {
+    font-size: 2rem;
+}

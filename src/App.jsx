@@ -1,21 +1,28 @@
 import './App.css';
+import {BrowserRouter, Routes,Route} from 'react-router-dom';
+
 import NavBar from './components/navbar/NavBar';
-import Carousel from './components/carousel/Carousel';
-import ItemListContainer from './components/itemlistcontainer/ItemListContainer';
-import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
+import ItemListContainer from '../src/pages/itemlistcontainer/ItemListContainer'
+import ItemDetailContainer from '../src/pages/itemDetailContainer/ItemDetailContainer';
+import Footer from './components/footer/Footer';
+import Home from './pages/homeContainer/Home';
+import AboutUs from './pages/aboutUs/AboutUs';
+import Contact from './components/contact/Contact';
 
 function App() {
   return (
     <>
-      
+      <BrowserRouter>
       <NavBar/>
-      <Carousel/>
-      <ItemListContainer titulo={"AQUI IRA UN CATALOGO DE PRODUCTOS"}/>
-      <ItemDetailContainer/>
-      <div className="App-footer">
-        <p> aca iran redes sociales y coso</p>
-      </div>
-    
+        <Routes>
+          <Route path="/" element= {<Home/>}/>
+          <Route path='/products' element= {<ItemListContainer/>}/>
+          <Route path='/detail/:id' element= {<ItemDetailContainer/>}/>
+          <Route path='/aboutUs' element= {<AboutUs/>}/>
+          <Route path='/contact' element= {<Contact/>}/>
+        </Routes>
+      <Footer/>
+      </BrowserRouter>
     </>
 
   );

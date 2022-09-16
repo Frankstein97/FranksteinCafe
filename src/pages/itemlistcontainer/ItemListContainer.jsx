@@ -1,8 +1,7 @@
-import './style.css';
-// import ItemCount from '../itemcount/ItemCount';
-import products from '../MockProductos';
+import './style.css'; 
+import products from '../../components/MockProductos';
 import { useEffect, useState } from 'react';
-import ItemList from '../itemList/ItemList';
+import ItemList from '../../components/itemList/ItemList';
 
 
 const ItemListContainer = () => {

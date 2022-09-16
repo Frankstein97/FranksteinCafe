@@ -1,0 +1,20 @@
+.Footer {
+        /* background-color: #A1CAC8; */
+        background-color: #00635e;
+        min-height: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
+    
+}
+.logo-footer img{
+    width: 110px;
+    border-radius: 100%;
+    background-color: #A1CAC8;
+}
+.roww p {
+    font-size: 1rem;
+}
