@@ -33,7 +33,7 @@ const SectionProducts = () => {
     <div className='mb-5' style={{marginLeft:"200px"}}>
     
           <h2 className="item-title">Filtrados</h2>
-          <Link to={'products'}>
+          <Link to={'category/Filtrados'}>
           <button className="badge text-bg-dark mb-4"><span>Ir a ver ► </span></button>
           </Link>
           <div className='item-info'>

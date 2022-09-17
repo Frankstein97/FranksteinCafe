@@ -22,20 +22,13 @@ const getProducts = new Promise((resolve, reject) => {
   
 });
   
+<div class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
     return (
       <>
-          {/* <div className='itemDetailContainer'>
-            <div className='textTop'> 
-             <p> ¡Si tenes alguna duda consulta primero!</p>
-            </div> */}
-      {/* {   
-       loading ? <div class="d-flex justify-content-center">
-       <div class="spinner-border" role="status">
-         <span class="visually-hidden">Loading...</span>
-       </div>
-    //  </div> : <ItemDetail item={data}></ItemDetail>
-      } */}
-          {/* </div> */}
           <ItemDetailList product = {itemDetail}  />
       </>
   
