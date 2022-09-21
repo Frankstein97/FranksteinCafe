@@ -2,9 +2,19 @@ import './style.css'
 import { useState } from 'react'
 import { ItemCount } from '../itemCount/ItemCount'
 
-const ItemDetail = ({title, price, description, category, stock, img }) => { 
-  const [itemCount, setItemCount] = useState(0)
+import {Link} from 'react-router-dom';
+import { useContext } from 'react'
+import { CartContex } from '../../context/CartContext'
 
+ const ItemDetail = ({title, price, description, product, stock, img }) => { 
+  const {addItem} = useContext(CartContex);
+  const [itemCount, setItemCount] = useState(0);
+  
+  
+
+    function onAdd (ItemDetail) {
+      addItem(ItemDetail, itemCount)
+    }
 
   return (
     <>
@@ -25,16 +35,18 @@ const ItemDetail = ({title, price, description, category, stock, img }) => {
           </div>
           <p className="card-description">{description}</p>
       </div>
-      
-      <div className='col-md-3 offset-md-3'>
-        
-          <span className="badge text-dark text-center mb-2"> Cantidad: <strong>{itemCount} unidades</strong> </span>
-           <ItemCount setItemCount={setItemCount} itemCount={itemCount} stock={stock}/>
+    
+      <div className='itemCountContainer_botons'>
+        <span className="badge text-dark text-center mb-2"> Cantidad: <strong>{itemCount} unidades</strong> </span>
+        <ItemCount setItemCount={setItemCount} itemCount={itemCount} stock={stock}/>
+        <div className= 'col-12 offset-md-6'>
+          <button className='btn btn-dark' onClick={() => onAdd (product)}> Agregar al Carrito</button>
+          <Link to={'/products'}><button className='btn btn-primary m-2'> Seguir comprando </button></Link>
+
+        </div>
       </div>
     </div>
 
-   {/* ))
-   } */}
     </>
   )
 }

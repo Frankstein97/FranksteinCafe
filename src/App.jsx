@@ -8,12 +8,14 @@ import {BrowserRouter, Routes,Route} from 'react-router-dom';
   import ContactContainer from './pages/contactContainer/ContactContainer'
   import Home from './pages/homeContainer/Home';
   import Footer from './components/footer/Footer';
-  
+  import {CartProvider } from './context/CartProvider'
   
 
 function App() {
   return (
     <>
+    <CartProvider>
+
       <BrowserRouter>
       <NavBar/>
 
@@ -28,6 +30,8 @@ function App() {
 
       <Footer/>
       </BrowserRouter>
+
+    </CartProvider>
     </>
 
   );

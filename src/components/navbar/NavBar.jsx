@@ -32,8 +32,8 @@ const NavBar = () => {
        
         <li className="nav-item me-3">
           <NavLink 
-            to={'/category/Productos'
-            }>
+            to={'/products'}
+            >
           <div className="nav-link" >PRODUCTOS</div>
           </NavLink>
         </li>

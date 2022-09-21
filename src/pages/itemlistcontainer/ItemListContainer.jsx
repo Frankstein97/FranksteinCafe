@@ -8,15 +8,23 @@ import {useParams} from 'react-router-dom';
 const ItemListContainer = () => {
   const {category} = useParams ();
   const [itemList, setitemList] = useState([]);
+  const [loading, setLoading] =useState (true)
+
 
 useEffect(() => {
   if (category) {
     const response = data.filter((response) => response.category === category)
-    setitemList (response)
+    setitemList (response);
+    setLoading () //cargaspinners en categorias
   } else {
-    getProducts.then ((response) => {
+    getProducts
+    
+    .then ((response) => {
+      
       setitemList (response)
     })
+    .catch ((err) => console.log(err))
+    .finally (() => setLoading (false));
   }
 }, [category]);
 
@@ -28,8 +36,17 @@ useEffect(() => {
     
   return (
     <>
+    
+    {loading ?
+      <div className='itemListContainerItems'>
+        <div className="spinner spinner-border justify-content-center" role="status">
+        <span className="visually-hidden">Loading...</span>
+        </div> 
+      </div> : 
     <ItemList lista={itemList} /> 
-    <div className='itemListContainerItems'></div>
+    }
+    
+    
     </>
   )
 }

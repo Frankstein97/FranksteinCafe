@@ -3,10 +3,13 @@ import './ItemListDetail.style.css'
 
 const ItemListDetail = ({product}) => {
     return (
+
         <div className='itemDetail row'>
+           
             {product.map((product) => (
             <ItemDetail 
-            key={product.id} 
+            key={product.id}
+            product={product} 
             title={product.title} 
             price={product.price}
             shortdescription={product.shortdescription} 
@@ -17,6 +20,8 @@ const ItemListDetail = ({product}) => {
             />
             
             ))
+
+            
             }
         </div>
     )
