@@ -2,7 +2,7 @@
     {
         id:'1',
         title: 'Cafe Guatemala 1/4kg',
-        price: '$2500',
+        price: '2500',
         shortdescription: '"...Altura media ideal para paladares que aprecian lo dulce y de acidez baja."',
         description: 'Es considerado un café suave y agradable, conocido a nivel internacional como Prime y Extra Prime. En las zonas intermedias, entre 1.070 a 1.200 metros sobre el nivel del mar, las calidades aumentan. El café de esta altura es conocido como Semiduro y Duro.',
         category: 'Productos',
@@ -12,7 +12,7 @@
     {
         id:'2',
         title: 'Cafe Colombia 1/4kg',
-        price: '$2500',
+        price: '2500',
         shortdescription: '"...El cafe que agrada a todos los paladares, equilibrado y con un gran cuerpo"',
         description: 'Las condiciones geográficas: su clima tropical y las altas montañas son ideales para el cultivo de café. Los procesos: mientras que Brasil apuesta por una recolección automatizada, en Colombia predomina la recolección manual que mejora la calidad del grano.',
         category: 'Productos',
@@ -22,7 +22,7 @@
     {
         id:'3',
         title: 'Cafe Peru 1/4kg',
-        price: '$2500',
+        price: '2500',
         shortdescription: '"...Se caracteriza por ser un cafe mas acido que otros, cuerpo medio y dulzor agradable"',
         description: ' El café peruano se produce en 350.000 hectáreas de cafetales en 210 distritos rurales ubicados en 10 departamentos de la vertiente oriental de los Andes, siendo las regiones de Amazonas, San Martín y Chanchamayo, las tres áreas principales de cultivo. Del café peruano, los consumidores aprecian su sabor suave, ligeramente dulce, su buen cuerpo y su aroma delicado, que lo han hecho merecedor de numerosos re- conocimientos en concursos de calidad y campeonatos baristas de todo el mundo.',
         category: 'Productos',
@@ -32,7 +32,7 @@
     {
         id:'4',
         title: 'Cafe Peru Premium 1/4kg',
-        price: '$3500',
+        price: '3500',
         shortdescription: '"...Se caracteriza por ser un cafe mas acido que otros, cuerpo ligero, notas frutales y florales"',
         description: ' El café peruano se produce en 350.000 hectáreas de cafetales en 210 distritos rurales ubicados en 10 departamentos de la vertiente oriental de los Andes, siendo las regiones de Amazonas, San Martín y Chanchamayo, las tres áreas principales de cultivo. Del café peruano, los consumidores aprecian su sabor suave, ligeramente dulce, su buen cuerpo y su aroma delicado, que lo han hecho merecedor de numerosos re- conocimientos en concursos de calidad y campeonatos baristas de todo el mundo.',
         category: 'Productos',
@@ -42,7 +42,7 @@
     {
         id:'5',
         title: 'Cafe Guatemala Premium 1/4 kg',
-        price: '$3500',
+        price: '3500',
         shortdescription: '"...Cafe de altura baja, poca acidez, cuerpo intermedio y notas exoticas para paladares exigentes"',
         description: 'Es considerado un café suave y agradable, conocido a nivel internacional como Prime y Extra Prime. En las zonas intermedias, entre 1.070 a 1.200 metros sobre el nivel del mar, las calidades aumentan. El café de esta altura es conocido como Semiduro y Duro.',
         category: 'Productos',
@@ -54,7 +54,7 @@
     {
         id:'51',
         title: 'Cafe Guatemala 1kg',
-        price: '$7500',
+        price: '7500',
         shortdescription: '"...Altura media ideal para paladares que aprecian lo dulce y de acidez baja."',
         description: 'Es considerado un café suave y agradable, conocido a nivel internacional como Prime y Extra Prime. En las zonas intermedias, entre 1.070 a 1.200 metros sobre el nivel del mar, las calidades aumentan. El café de esta altura es conocido como Semiduro y Duro.',
         category: 'Productos',
@@ -64,7 +64,7 @@
     {
         id:'52',
         title: 'Cafe Colombia 1kg',
-        price: '$7500',
+        price: '7500',
         shortdescription: '"...El cafe que agrada a todos los paladares, equilibrado y con un gran cuerpo"',
         description: 'Las condiciones geográficas: su clima tropical y las altas montañas son ideales para el cultivo de café. Los procesos: mientras que Brasil apuesta por una recolección automatizada, en Colombia predomina la recolección manual que mejora la calidad del grano.',
         category: 'Productos',
@@ -74,7 +74,7 @@
     {
         id:'53',
         title: 'Cafe Peru 1kg',
-        price: '$7500',
+        price: '7500',
         shortdescription: '"...Se caracteriza por ser un cafe mas acido que otros, cuerpo medio y dulzor agradable"',
         description: ' El café peruano se produce en 350.000 hectáreas de cafetales en 210 distritos rurales ubicados en 10 departamentos de la vertiente oriental de los Andes, siendo las regiones de Amazonas, San Martín y Chanchamayo, las tres áreas principales de cultivo. Del café peruano, los consumidores aprecian su sabor suave, ligeramente dulce, su buen cuerpo y su aroma delicado, que lo han hecho merecedor de numerosos re- conocimientos en concursos de calidad y campeonatos baristas de todo el mundo.',
         category: 'Productos',
@@ -84,7 +84,7 @@
     {
         id:'54',
         title: 'Cafe Peru Premium 1kg',
-        price: '$9500',
+        price: '9500',
         shortdescription: '"...Se caracteriza por ser un cafe mas acido que otros, cuerpo ligero, notas frutales y florales"',
         description: ' El café peruano se produce en 350.000 hectáreas de cafetales en 210 distritos rurales ubicados en 10 departamentos de la vertiente oriental de los Andes, siendo las regiones de Amazonas, San Martín y Chanchamayo, las tres áreas principales de cultivo. Del café peruano, los consumidores aprecian su sabor suave, ligeramente dulce, su buen cuerpo y su aroma delicado, que lo han hecho merecedor de numerosos re- conocimientos en concursos de calidad y campeonatos baristas de todo el mundo.',
         category: 'Productos',
@@ -94,7 +94,7 @@
     {
         id:'55',
         title: 'Cafe Guatemala Premium 1kg',
-        price: '$9500',
+        price: '9500',
         shortdescription: '"...Cafe de altura baja, poca acidez, cuerpo intermedio y notas exoticas para paladares exigentes"',
         description: 'Es considerado un café suave y agradable, conocido a nivel internacional como Prime y Extra Prime. En las zonas intermedias, entre 1.070 a 1.200 metros sobre el nivel del mar, las calidades aumentan. El café de esta altura es conocido como Semiduro y Duro.',
         category: 'Productos',
@@ -108,7 +108,7 @@
     {
         id:'101',
         title: 'Aeropress',
-        price: '$4000',
+        price: '4000',
         shortdescription: "Metodo que utiliza la presion para moliendas finas y resultados intensos", 
         description: '"AeroPress se le conoce al dispositivo y al método de extracción para preparar café. El utensilio consiste en un cilindro de propileno el cual se coloca sobre una taza. Posteriormente, se le coloca un filtro de papel, café y agua caliente. La infusión se extrae gracias a un émbolo obteniendo así, un café aromático."',
         category: 'Filtrados',
@@ -118,7 +118,7 @@
     {
         id:'102',
         title: 'Kalita Wave',
-        price: '$5000',
+        price: '5000',
         shortdescription: "el filtrado por medio de tres orificios le da un sabor increible a este metodo", 
         description: '"Kalita Wave es un método similar al Chemex o V60, del cual se obtiene una taza limpia. Esto se contrasta con el perfil robusto de preparaciones de inmersión completa como la prensa francesa o el clever. Aunque sea similar al Chemex o al V60, Kalita Wave tiene una característica diferente en su forma de extracción."',
         category: 'Filtrados',
@@ -128,7 +128,7 @@
     {
         id:'103',
         title: 'Prensa Francesa',
-        price: '$4500',
+        price: '4500',
         shortdescription: "El metodo mas facil y efectivo de preparar un cafe y compartir", 
         description: '"La Prensa Francesa es un método por inmersión*, permite controlar todo el proceso de extracción, desde el tiempo de contacto, la temperatura y la turbulencia, entre otras variables. También al actuar directamente sobre todo el café molido nos da la posibilidad de extraer muy bien los sabores.',
         category: 'Filtrados',
@@ -138,7 +138,7 @@
     {
         id:'104',
         title: 'Chemex',
-        price: '$10000',
+        price: '10000',
         shortdescription: "El futuro del sabor del cafe depende de este metodo, la mejor opcion", 
         description: 'La cafetera Chemex fue inventada por un químico alemán, Peter J. Schlumbohm, en 1941. Además de químico, Schlumbohm era un prolífico inventor, registró unas 300 patentes de utensilios varios, desde un agitador de cócteles a automóviles. El primer mérito de esta cafetera es poder controlar a la perfección la temperatura del agua, uno de los factores más importantes para obtener el mejor sabor con el café, y algo difícil de vigilar con una cafetera automática.',
         category: 'Filtrados',
@@ -148,7 +148,7 @@
     {
         id:'105',
         title: 'Volturno Italiana',
-        price: '$7000',
+        price: '7000',
         category: 'Filtrados',
         shortdescription: "Cafetera para dos, Molienda intermedia, notas muy asentuadas al beber", 
         description: '"Es la cafetera italiana de fabricación nacional por excelencia, con su característico color plateado. La empresa nació hace 70 años, y desde 1951 provee cafeteras italianas para todos los argentinos.Otra de las ventajas de las cafeteras italianas es que pueden preparar varios cafés a la vez, todo depende del tamaño de la cafetera. Hay cafeteras desde una sola taza hasta nueve tazas o incluso 12 tazas, aunque las más habituales son de tres y de seis tazas.',
@@ -158,7 +158,7 @@
     {
         id:'107',
         title: 'Filtros Chemex',
-        price: '$1200',
+        price: '1200',
         category: 'Filtrados',
         shortdescription: "Filtros Especiales Chemex", 
         description: 'La cafetera Chemex fue inventada por un químico alemán, Peter J. Schlumbohm, en 1941. Además de químico, Schlumbohm era un prolífico inventor, registró unas 300 patentes de utensilios varios, desde un agitador de cócteles a automóviles. El primer mérito de esta cafetera es poder controlar a la perfección la temperatura del agua, uno de los factores más importantes para obtener el mejor sabor con el café, y algo difícil de vigilar con una cafetera automática.',
@@ -168,7 +168,7 @@
     {
         id:'108',
         title: 'Filtros ',
-        price: '$300',
+        price: '300',
         category: 'Filtrados',
         shortdescription: "Filtros multiuso ", 
         description: 'El filtro de café se trata de un utensilio de cocina que tiene la función de filtrar el agua caliente de los granos molidos del café para la elaboración del café bebido',
@@ -178,7 +178,7 @@
     {
         id:'109',
         title: 'Filtro de tela ',
-        price: '$600',
+        price: '600',
         category: 'Filtrados',
         shortdescription: "Filtro de tela ideal para teteras ", 
         description: 'El filtro de café se trata de un utensilio de cocina que tiene la función de filtrar el agua caliente de los granos molidos del café para la elaboración del café bebido',

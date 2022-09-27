@@ -4,6 +4,7 @@ import data from '../../components/MockFiltrados';
 import { useEffect, useState } from 'react';
 import ItemList from '../../components/itemList/ItemList';
 import {useParams} from 'react-router-dom';
+import Loader from '../../components/loader/Loader';
 
 const ItemListContainer = () => {
   const {category} = useParams ();
@@ -37,13 +38,7 @@ useEffect(() => {
   return (
     <>
     
-    {loading ?
-      <div className='itemListContainerItems'>
-        <div className="spinner spinner-border justify-content-center" role="status">
-        <span className="visually-hidden">Loading...</span>
-        </div> 
-      </div> : 
-    <ItemList lista={itemList} /> 
+    {loading ? <Loader/>:  <ItemList lista={itemList} /> 
     }
     
     

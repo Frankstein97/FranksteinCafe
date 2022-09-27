@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import ItemDetailList from '../../components/ItemDetailList/ItemDetailList'
 import { useParams } from 'react-router-dom';
 import data from '../../components/MockFiltrados'
+import Loader from '../../components/loader/Loader';
 
 
 const ItemDetailContainer = () => {
@@ -28,22 +29,15 @@ const getProducts = new Promise((resolve, reject) => {
   
 });
   
-<div className="d-flex justify-content-center">
-  <div className="spinner-border" role="status">
-    <span className="visually-hidden">Loading...</span>
-  </div>
-</div>
+// {/* <div className="d-flex justify-content-center">
+//   <div className="spinner-border" role="status">
+//     <span className="visually-hidden">Loading...</span>
+//   </div>
+// </div> */}
     return (
       <>
       { 
-      loading ? 
-      <div className='itemListContainerItems'>
-        <div className="spinner spinner-border justify-content-center" role="status">
-        <span className="visually-hidden">Loading...</span>
-        </div>
-      </div>  :
-     
-          <ItemDetailList product = {itemDetail}  />
+      loading ? <Loader/> : <ItemDetailList product = {itemDetail}  />
         }
       </>
   

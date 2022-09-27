@@ -9,6 +9,7 @@ import {BrowserRouter, Routes,Route} from 'react-router-dom';
   import Home from './pages/homeContainer/Home';
   import Footer from './components/footer/Footer';
   import {CartProvider } from './context/CartProvider'
+  import Cart from './components/cart/Cart';
   
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
 
       <BrowserRouter>
       <NavBar/>
-
+      
         <Routes>
+          <Route path="/cart" element= {<Cart/>}/>
           <Route path="/" element= {<Home/>}/>
           <Route path='/products' element= {<ItemListContainer titulo={"Todos los productos"}/>}/>
           <Route path='/category/:category' element={<ItemListContainer/>}/>

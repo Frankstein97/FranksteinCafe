@@ -1,0 +1,38 @@
+ /* CartWidget */
+.CartWidgetContainer {
+    margin: 1rem;
+    width: 2.5rem;
+  }
+  a {
+    text-decoration: none;
+  }
+
+.cart-container {
+    height: 900px;
+    margin-top: 2rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+.cart-header {
+    margin-top: 2rem;
+  }
+.cart-content {
+    margin-top: 2rem;
+  }
+.cart-footer {
+    margin-top: 20px;
+  }
+.add-count {
+  top: 1rem;
+  right: 0.5px;
+  position: absolute;
+  background: #4b1b10;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}

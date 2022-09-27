@@ -1,10 +1,10 @@
 import './style.css'
 
-export const ItemCount = ({stock, setItemCount, itemCount}) => {
+export const ItemCount = ({stock, count, setCount}) => {
 
     
-  const add = () => itemCount < stock ? setItemCount (itemCount+1) :alert ("No hay stock disponible");
-  const subtract = () => itemCount > 0 ? setItemCount (itemCount-1) :alert ("Elija la cantidad que desea sumar al carrito");
+  const add = () => count < stock ? setCount (count+1) :alert ("No hay stock disponible");
+  const subtract = () => count > 0 ? setCount (count-1) :alert ("Elija la cantidad que desea sumar al carrito");
 
 
   // const goToCart = () => {

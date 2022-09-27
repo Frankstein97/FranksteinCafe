@@ -1,36 +1,58 @@
 import { useState } from "react";
-import { CartContex } from "./CartContext"
+import { CartContext } from "./CartContext";
 
-// este provider me sirve para pasarle parametros al context y no usar estados dentro del app 
-export const CartProvider = ({children}) => {
-  const [cart,setCart] =useState ([]);
+// este provider me sirve para pasarle parametros al context y no usar estados dentro del app.
 
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
 
-const addItem = (product, quantity) => {
-    if (isInCart (product.id)) {
-    alert ('Este protducto ya se encuentra en el carrito ');
+  const addItem = (product, quantity) => {
+    if (isInCart(product.id)) {
+      const newCartList = cart.map((cartItem) => {
+        if (cartItem.id === product.id) {
+          return {
+            // product: product,
+            quantity: cartItem.quantity + quantity,
+          };
+        } else {
+          return cartItem;
+        }
+      });
+      setCart(newCartList);
     } else {
-      setCart ([...cart, {...product, quantity}])
+      setCart([...cart, { ...product, quantity }]);
     }
-    console.log ('cart', [...cart, {...product, quantity}])
-}
-    const isInCart = (id) => {
-        return cart.some ((product) => product.id === id);
-        };
+  };
 
+  const isInCart = (id) => {
+    return cart.find((cartItem) => cartItem.id === id);
+  };
 
-//FUNCIONES QUE UTILIZAREMOS MAS ADELANTE QUIZA NOSE:
-        
-    // const clear = () => {
-    //     setCart([])
-    // }
-    // const removeItem = (id, setCart) => {
-    //     setCart.splice ((product) => product.id === id)
-    // }
-    return (
-        <CartContex.Provider value= {{cart,addItem}}>
-            {children}
-        </CartContex.Provider>
+  const clear = () => {
+    setCart([]);
+  };
+
+  const removeItem = (productId) => {
+    let newCartList = [];
+    cart.forEach((product) => {
+      if (product.id === productId) {
+      } else {
+        newCartList.push(product);
+      }
+    });
+    setCart(newCartList);
+  };
+
+  const totalItems = () => {
+    return cart.reduce((acc, cartItem) => acc + cartItem.quantity, 0);
+  };
+
+  return (
+    <CartContext.Provider
+      value={{ cart,isInCart, addItem, removeItem, clear, totalItems }}
+    >
+      {children}
+    </CartContext.Provider>
   );
 };
 

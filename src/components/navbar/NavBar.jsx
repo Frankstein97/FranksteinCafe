@@ -1,8 +1,7 @@
 import './style.css';
 
-import CartWidget from './CartWidget';
-// import {Link} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
+import CartWidget from '../cart/CartWidget';
 
 const NavBar = () => {
   return (
@@ -12,6 +11,7 @@ const NavBar = () => {
   <div className="container-fluid">
     <NavLink to={'/'}>
     <div className="navbar-brand me-2" style={{display:'flex'}}>
+    
     <img src="https://acegif.com/wp-content/uploads/gifs/coffee-88.gif" alt="" width="90" className="d-inline-block align-text-top"/>
     <h1 >Cafe App</h1>
     </div>
@@ -56,7 +56,9 @@ const NavBar = () => {
       </form>
       
     </div>
-    <CartWidget/>
+    <NavLink to={'/cart'}>
+      <CartWidget/>
+    </NavLink>
   </div>
 </nav>
     
