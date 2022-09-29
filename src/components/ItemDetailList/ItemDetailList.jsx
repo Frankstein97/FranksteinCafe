@@ -4,7 +4,7 @@ import './ItemListDetail.style.css'
 const ItemListDetail = ({product}) => {
     return (
 
-        <div className='itemDetail row'>
+        <div key={product.id} className='itemDetail row'>
            
             {product.map((product) => (
             <ItemDetail 
