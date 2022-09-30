@@ -1,41 +1,38 @@
-import './style.css'
-import { useState, useEffect } from 'react';
-import ItemDetailList from '../../components/ItemDetailList/ItemDetailList'
-import { useParams } from 'react-router-dom';
+import "./style.css";
+import { useState, useEffect } from "react";
+import ItemDetail from "../../components/itemDetail/ItemDetail";
+// import ItemDetailList from '../../components/ItemDetailList/ItemDetailList'
+import { useParams } from "react-router-dom";
 // import data from '../../components/MockFiltrados'
-import Loader from '../../components/loader/Loader';
-import { getFirestore, doc, getDoc, collection, getDocs } from "firebase/firestore"; //
-
+// import Loader from "../../components/loader/Loader";
+import { getFirestore, doc, getDoc } from "firebase/firestore"; //
 
 const ItemDetailContainer = () => {
-  const [itemDetail, setItemDetail] = useState ([]);
-  const { category } = useParams ();
-  const [loading, setLoading] =useState (true)
+  const [product, setProduct] = useState([]);
+  const { id } = useParams();
+  // const [loading, setLoading] = useState(true);
 
-    useEffect (() => {
-      getProducts()
-    }, [category]);   
-    
-const getProducts = () => {
   const db = getFirestore();
-  const querySnapshot =collection (db, "items");
-  getDocs(querySnapshot)
-  .then((resolve) => {
-    const data = resolve.docs.map((doc) => {
-      return {id: doc.id, ...doc.data() };
-    });
-    if (category) {
-    setItemDetail (data.filter (
-      (response) => response.category === category)
-    )} else setItemDetail (data);
 
-    setLoading(false);
-  })
-  .catch((reject) => console.log(reject))
+  const getProducts = () => {
+    const queryDoc = doc(db, "items", id);
+
+    getDoc(queryDoc)
+      .then((res) => {
+        setProduct({ id: res.id, ...res.data() });
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getProducts();
+  }, [id]);
+
+  return (
+    <div>
+      {product ? <ItemDetail product={product} /> : <h1>loading...</h1>}
+      {/* <> {loading ? <Loader /> : <ItemDetailList product={itemDetail} />} </> */}
+    </div>
+  );
 };
-
-
-    return <> {loading ? <Loader/> : <ItemDetailList product = {itemDetail} />} </>
-
-};
-export default ItemDetailContainer
+export default ItemDetailContainer;

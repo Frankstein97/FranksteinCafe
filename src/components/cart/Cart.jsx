@@ -4,7 +4,7 @@ import { CartContext } from "../../context/CartContext";
 import { NavLink } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, addItem, removeItem, clear } = useContext(CartContext);
+  const { cart, TotalInCart, removeItem, clear } = useContext(CartContext);
   console.log("cart", cart);
 
   return (
@@ -17,7 +17,7 @@ const Cart = () => {
           <>
             <h2>No hay productos bro</h2>
             <NavLink to={"/products"}>
-              <button className="col-12 btn btn-outline-warning justify-content-md-end">
+              <button className="col-12 btn btn-lg btn-outline-warning justify-content-md-end">
                 Ir a comprar
               </button>
             </NavLink>
@@ -70,9 +70,7 @@ const Cart = () => {
         )}
         <div className="cart-footer col-12 mx-auto mb-5 ">
           <div>
-            <h4 className="text-warning ">
-              TOTAL: ${cart.reduce((a, b) => a + b.price * b.quantity, 0)}
-            </h4>
+            <h4 className="text-warning ">TOTAL: ${TotalInCart()}</h4>
           </div>
           <div>
             <NavLink to={"/products"}>

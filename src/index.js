@@ -3,6 +3,30 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDz9yF39HWTMuXvZw5nndZiMHl1JFf-_p4",
+  authDomain: "franksteincafe.firebaseapp.com",
+  projectId: "franksteincafe",
+  storageBucket: "franksteincafe.appspot.com",
+  messagingSenderId: "996267043453",
+  appId: "1:996267043453:web:52a4b8b00c551855a4df14"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+
+/*/__________________FIREBASE REAL ORIGINAL_____________________________________________//
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -20,6 +44,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+//________________________no usar hasta que funcione el codigo____________________________/*/
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

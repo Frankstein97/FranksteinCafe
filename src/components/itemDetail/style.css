@@ -1,4 +1,7 @@
 
+.item_detail { 
+    display: flex;
+}
 .itemDetail {
     margin: 0px 10px;
     height: 85vh;
