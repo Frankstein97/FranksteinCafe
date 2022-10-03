@@ -1,11 +1,79 @@
 import "./style.css";
-import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+import { useContext, useState } from "react";
+import { CartContext,  } from "../../context/CartContext";
 import { NavLink } from "react-router-dom";
+import moment from "moment";
+import {
+  collection,
+  addDoc,
+  getFirestore,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
+
 
 const Cart = () => {
+  const navigate = useNavigate();
+  const [order, setOrder] = useState({
+    buyer: {
+      name: "miau",
+      phone: "12121212121",
+      email: "miaumiau@miau.com",
+    },
+    items: [],
+    total: 0,
+    date: "",
+  });
+
   const { cart, TotalInCart, removeItem, clear } = useContext(CartContext);
-  console.log("cart", cart);
+  const db = getFirestore();
+
+  const createOrder = () => {
+    setOrder((currentOrder) => {
+      return {
+        ...currentOrder,
+        items: cart,
+        total: cart.reduce((acc, item) => acc + item.price * item.quantity, 0),
+        date: moment().format("DD/MM/YYYY, h:mm:ss a"),
+      };
+    });
+    
+    const query = collection(db, "orders");
+    addDoc(query, order)
+      .then(({ id }) => {
+        console.log({ id });
+        updateStockProduct();
+        alert("lista la compra");
+      })
+      .catch(() => console.log("error al finalizar la orden"));
+  };
+
+  const updateStockProduct = () => {
+    cart.forEach((product) => {
+      const queryUpdate = doc(db, "items", product.id);
+      updateDoc(queryUpdate, {
+        category: product.category,
+        description: product.description,
+        img: product.img,
+        price: product.price,
+        shortdescription: product.shortdescription,
+        stock: product.stock - product.quantity,
+        title: product.title,
+        
+      })
+        .then(() => {
+          if (cart[cart.length -1].id === product.id){
+          console.log("Se actualizo el stock");
+          clear();
+          navigate('/')
+          }
+        })
+        .catch(() => {
+          console.log("error al actualizar el stock");
+        });
+    });
+  };
 
   return (
     <>
@@ -25,8 +93,8 @@ const Cart = () => {
         ) : (
           <>
             {cart.map((product) => (
-              <>
-                <div className="cart-content list-group " key={product.id}>
+              <div key={product.id}>
+                <div className="cart-content list-group ">
                   <ul className="list-group">
                     <li className="list-group-item">
                       <div className="container text-center">
@@ -64,7 +132,7 @@ const Cart = () => {
                     </li>
                   </ul>
                 </div>
-              </>
+              </div>
             ))}
           </>
         )}
@@ -78,7 +146,10 @@ const Cart = () => {
                 Ver mas productos
               </button>
             </NavLink>
-            <button className="btn btn-outline-success col col-lg-5 me-2">
+            <button
+              onClick={createOrder}
+              className="btn btn-outline-success col col-lg-5 me-2"
+            >
               Finalizar Compra
             </button>
 

@@ -1,5 +1,4 @@
 import "./style.css";
-import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
@@ -7,7 +6,7 @@ const CartWidget = () => {
   const { totalItems } = useContext(CartContext);
   return (
     <>
-      <NavLink to={"/cart"}>
+
         <div className="CartWidgetContainer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +24,7 @@ const CartWidget = () => {
             }
           </div>
         </div>
-      </NavLink>
+    
     </>
   );
 };

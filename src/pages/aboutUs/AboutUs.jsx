@@ -1,4 +1,6 @@
 import "./style.css";
+import Contact from "../../components/contact/Contact";
+
 
 const AboutUs = () => {
   return (
@@ -55,6 +57,7 @@ const AboutUs = () => {
           de secado mecánico del grano.
         </p>
       </div>
+      <Contact/>
     </>
   );
 };

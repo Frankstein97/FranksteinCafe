@@ -40,3 +40,12 @@ margin: 2rem;
 
   position: absolute;
 }
+
+
+
+
+.listaProductos2 {
+    display: grid;
+    grid-template-columns: 700px ;
+    margin-top: 5rem;
+}
