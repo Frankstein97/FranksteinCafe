@@ -1,0 +1,24 @@
+.loader_gif{
+    align-items: center;
+    text-align:center;
+    background-color: #FBF3CB;
+    height: 40rem;
+    
+}
+.loader_gif img{
+    align-items: center;
+    text-align:center;
+    width: 40rem;
+    margin-top: 5rem;
+    }
+
+@media only screen and (max-width: 600px) {
+    .loader_gif {
+        height: 30rem;
+    }
+    .loader_gif img{
+        width: 20rem;
+        margin-top: 6rem;
+        
+    }
+    }

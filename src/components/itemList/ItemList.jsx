@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const itemList = ({ lista }) => {
   return (
-    <div className="itemList row row-cols-2 row-cols-md-3 g-4">
+    <div className="item-list row row-cols-2 row-cols-md-3">
       {lista.map((product) => (
         <Link
           key={product.id}
@@ -20,6 +20,7 @@ const itemList = ({ lista }) => {
         </Link>
       ))}
     </div>
+
   );
 };
 

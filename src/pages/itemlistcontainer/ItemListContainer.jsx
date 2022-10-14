@@ -4,7 +4,7 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import ItemList from "../../components/itemList/ItemList";
 import { useParams } from "react-router-dom";
-// import Loader from "../../components/loader/Loader";
+import Loader from "../../components/loader/Loader";
 //firebase
 import {
   getFirestore,
@@ -15,9 +15,9 @@ import {
 } from "firebase/firestore";
 
 const ItemListContainer = () => {
-  const { category } = useParams();
+  const { category } = useParams(); // with this the parameters are filtered by category (they are declared in the app.jsx with react router dom)
   const [itemList, setitemList] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  const [loader, setLoader] = useState(true); //  This State is used to generate the spinner
 
   const getProducts = () => {
     const db = getFirestore();
@@ -48,9 +48,16 @@ const ItemListContainer = () => {
     getProducts();
   }, [category]);
 
+
+  useEffect (() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 2500)
+  })
+  
   return (
-    <div>
-      <ItemList lista={itemList} />
+    <div className="item_list_container">
+        {loader ? <Loader/> : <ItemList lista={itemList} /> }
     </div>
     // return <>{loading ? <Loader /> : <ItemList lista={itemList} />}</>;
   );

@@ -1,65 +1,114 @@
 import "./style.css";
+// Import several images
+import cafecuartos from '../../img/cafecuartos.jpg'
+import cafekilo from '../../img/cafekilo.jpg'
+import cafeterafiltro from '../../img/cafeterafiltro.jpg'
+import filtrochemex from '../../img/filtrochemex.jpg'
+import presionvolturno from '../../img/presionvolturno.jpg'
+import variedad from '../../img/variedad.jpg'
+
+
 import { Link } from "react-router-dom";
+
+
 
 const SectionProducts = () => {
   return (
     <>
-      <div className="itemProduct row m-5">
-        <div className="col-12 col-sm-6">
-          <div className="item-image text-center">
+      <div className="item_product " style={{}}>
+        <h2 className="item-title text-center"  data-aos="flip-down"> Cafes en Grano </h2>
+        <div className=" cardImgContainer col-12 col-sm-12 w-100 row">
+
+          <div className="section_card card col-4  ">
             <img
-              src="https://c.tenor.com/_h5RONFrRawAAAAC/cafe-coffee.gif"
-              className="img-fluid rounded mx-auto d-block"
-              alt="gifcafe"
+              src= {cafecuartos}
+              className=""
+              alt="cafecuartos"
             />
-            <p>Revisa todo lo que hay para vos</p>
+          </div>
+          <div className="section_card card col-4 ">
+            <img
+              src={variedad}
+              className=""
+              alt="variedad"
+            />
+          </div>
+          <div className="section_card card col-4 ">
+            <img
+              src={cafekilo}
+              className=""
+              alt="cafekilo"
+            />
           </div>
         </div>
-        <div className="col-12 col-sm-6 ">
-          <div className="mb-5">
-            <h2 className="item-title">Productos</h2>
-            <Link to={"/products"}>
-              <div>
-                <button className="badge text-bg-light mb-4">
-                  <span>Ir a comprar ► </span>
-                </button>
-              </div>
-            </Link>
-            <div className="item-info"></div>
-            <p className="card-description">
-              {" "}
-              Aqui podras ver las variedades de cafe que tenemos para ofrecer{" "}
-            </p>
-          </div>
+        <div className="card-description col-12 col-sm-12">
+          <p className="text-center" data-aos="zoom-in-down">
+          "Aquí podrás ver todos los granos que tenemos para ofrecerte. <br/>
+            Contamos con una amplia variedad de sabores, alturas y orígenes que hacen<br/>
+            a nuestro café único y disfrutables para paladares exigentes."
+
+          </p>
+        </div>
+        <div>
+          <Link to={"/products"}>
+            <div className="d-grid col-6 mx-auto mb-4">
+              <button className="section_button btn btn-dark" type="button">
+                ◅ VER MAS ▻
+              </button>
+            </div>
+          </Link>
         </div>
       </div>
 
-      <div className="itemFilter row">
-        <div className="col-12 col-sm-6">
-          <div className="mb-5" style={{ marginLeft: "200px" }}>
-            <h2 className="item-title">Filtrados</h2>
-            <Link to={"category/filtrados"}>
-              <button className="badge text-bg-dark mb-4">
-                <span>Ir a ver ► </span>
-              </button>
-            </Link>
-            <div className="item-info"></div>
-            <p className="card-description">
-              {" "}
-              Aqui podras ver los metodos de filtrado de cafe que tenemos para
-              mostrarte{" "}
-            </p>
+      <div className="separatorSection">
+        <img
+          src="https://i.pinimg.com/originals/0b/a4/7d/0ba47d70c9e5da3c57b9c96a652020b0.gif"
+          alt="gifSeparatorSection"
+          style={{ width: "400px" }}
+        />
+      </div>
+
+      <div className="item_product" style={{}}>
+        <h2 className="item-title text-center"  data-aos="flip-down"> Metodos de Filtrado </h2>
+        <div className="cardImgContainer col-12 col-sm-12 w-100 row">
+          <div className="section_card card col-4  ">
+            <img
+              src={cafeterafiltro}
+              className=""
+              alt="cafeterafiltro"
+            />
+          </div>
+          <div className="section_card card col-4 ">
+            <img
+              src={filtrochemex}
+              className=""
+              alt="fitrochemex"
+            />
+          </div>
+          <div className="section_card card col-4 ">
+            <img
+              src={presionvolturno}
+              className=""
+              alt="presionvoluturno"
+            />
           </div>
         </div>
-        <div className="col-12 col-sm-6 ">
-          <div className="item-image text-center">
-            <img
-              src="https://joecoffeecompany.com/wp-content/uploads/2018/07/joe-coffee-chemex-second-pour-step-5.gif"
-              className="imgsection img-filter rounded mx-auto d-block"
-              alt="giffiltrado"
-            />
-            <p>Revisa que filtrado se adapta a tu paladar</p>
-          </div>
+        <div className="card-description col-12 col-sm-12">
+          <p className="text-center" data-aos="zoom-in-down">
+            “También contamos con una sección en donde te mostramos los métodos <br/> 
+            que mas nos gustan practicar y la forma que tenemos de prepararlos,<br/>
+             el sabor final de un mismo tipo de grano dependerá del método que utilices.<br/>
+              Cada grano tiene un potencial que se ajusta a tu gusto por el café.”
+          </p>
+        </div>
+        <div>
+          <Link to={"category/Filtrados"}>
+            <div className="d-grid col-6 mx-auto mb-4">
+              <button className="section_button btn btn-dark" type="button">
+                ◅ IR A VER ▻
+              </button>
+            </div>
+          </Link>
         </div>
       </div>
     </>

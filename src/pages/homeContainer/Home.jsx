@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <>
       <Carousel />
-      {/* En estas secciones iran carruseles */}
       <SectionProducts />
     </>
   );

@@ -1,14 +1,13 @@
 import './style.css'
-
+import gifload from '../../img/gifload.gif'
  const Loader = () => {
+  
 
   return (
-    <>  
-      <div className='itemListContainerItems'>
-        <div className="spinner spinner-border justify-content-center" role="status">
-        <span className="visually-hidden">Loading...</span>
-        </div>
-        </div>
+    <>    
+      <div className='loader_gif'>
+        <img src={gifload} alt="gifload"/>
+      </div>
     </>
   )
 

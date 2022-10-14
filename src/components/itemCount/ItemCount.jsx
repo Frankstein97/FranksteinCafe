@@ -10,14 +10,14 @@ export const ItemCount = ({ stock, count, setCount }) => {
 
   return (
     <>
-      <div className="itemCountContainer_botons">
+      
         <button className="btn btn-outline-dark m-1" onClick={subtract}>
           -
         </button>
         <button className="btn btn-outline-dark m-1" onClick={add}>
           +
         </button>
-      </div>
+      
     </>
   );
 };

@@ -11,14 +11,14 @@
 }
 .item-image p {
     font-size: 1.3rem;
-text-align: center;
-margin: 2rem;
+    text-align: center;
+    margin: 2rem;
 }
 .badge-detail {
     font-size: 1rem;
 }
-.item-title {
-    font-size: 4em;
+.itemDetail_title {
+    font-size: 3em;
     padding: 20px 0px;
 }
 .item-price {
@@ -29,23 +29,68 @@ margin: 2rem;
 }
 
 
-
-
-
 .itemCountContainer {
     position: relative;
 
 }
-.itemCountContainer_botons {
 
-  position: absolute;
+.itemCountContainer_botons {
+    margin-bottom: 1rem;
 }
 
-
-
+.itemCountContainer_botons div {
+   
+    width: 100%;
+    margin-bottom: 1rem;
+}
 
 .listaProductos2 {
     display: grid;
     grid-template-columns: 700px ;
     margin-top: 5rem;
+}
+
+.button_nav{
+    display: inline;
+    margin-left: 2rem;
+}
+.item_badge {
+    margin: 6px 2px;
+    padding: 10px 8px 12px 12px;
+    font-size: 14px;
+}
+.itemDetail_badge{
+    
+font-size: 25px;
+}
+
+@media (max-width: 600px) {
+
+    .item_detail {
+        flex-direction: column-reverse;
+    }
+    .itemDetail_title {
+        text-align: center;
+        font-size: 2rem;
+        padding: 10px 0px;
+    }
+    .item-image p {
+        visibility: hidden;
+        font-size: 0px;
+        text-align: center;
+        margin: 0px;
+    }
+    .item_description {
+    text-align: center;
+    }
+    .button_nav{
+        margin-left: 1px;
+        
+    }
+    .quantity {
+        text-align: center;
+    }
+    .card-description {
+        margin: 1rem;
+    }
 }

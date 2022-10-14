@@ -15,6 +15,20 @@
     border-radius: 100%;
     background-color: #A1CAC8;
 }
-.roww p {
+.Footer button{
+    background: none;
+    border: 0;
+    color: inherit;
+}
+.row_nav p {
     font-size: 1rem;
+}
+.Footer p {
+    color: white;
+    text-decoration: none;
+}
+@media (max-width: 600px){
+.footer_row {
+flex-direction: column
+}
 }

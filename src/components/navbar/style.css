@@ -1,22 +1,25 @@
 /* NavBar */
-
-.container-fluid {
-    background-color: #A1CAC8;
-    padding: 20px;
-    padding-bottom: 35px !important;
+.navbar {
+  /* height: 8rem; */
+  background-color: #A1CAC8;
 }
-  @media screen {
-    .container-fluid {
+.title_app{
+margin-top: 0.5rem;
+}
+
+  /* @media screen {
+    .container_fluid {
       background-color: #A1CAC8;
       padding: 2px;
-  }
-  }
+  } */
+  /* } */
   
   .nav-link {
     text-decoration: none;
     font-size: 20px;
   }
-  .navbar-brand {
+  .navbar_brand {
+    color:white;
     font-size: 2rem
   }
  .navbar-nav {
@@ -26,4 +29,10 @@
 
 a {
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+.title_app{
+  margin-top: 1.2rem;
+  }
 }

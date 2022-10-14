@@ -1,31 +1,39 @@
 
-.itemProduct {
+.item_product {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
     border-bottom: 3px solid gray;
-    margin: 80px 30px;
-    height: 50vh;
-}
-.imgsection {
-    width: 300px;
-}
-.item-image {
-    padding: 42px 1px;
-}
-.img-fluid {
-    width: 350px;
-}
-
-.item-image p {
-    font-size: 1.3rem;
-text-align: center;
-margin: 2rem;
+    margin: 20px 10px 15px 10px;
+    height:auto 
+}   
+.cardImgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
 .item-title {
-    font-size: 2.5rem;
+    font-family: 'Alkalami', serif;
+    font-size: 4rem;
     padding: 20px 0px;
 }
-
-
-.badge {
-    font-size: 2rem;
+.separatorSection {
+     width: 100%;
+     height: 34rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;  
+    background-color: #694329;
+}
+.section_card {
+    height: auto;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.card-description p{
+    font-style: italic;
+}
+.section_button {
+    height: 3rem    ;
 }

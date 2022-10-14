@@ -4,13 +4,13 @@ import ItemDetail from "../../components/itemDetail/ItemDetail";
 // import ItemDetailList from '../../components/ItemDetailList/ItemDetailList'
 import { useParams } from "react-router-dom";
 // import data from '../../components/MockFiltrados'
-// import Loader from "../../components/loader/Loader";
+import Loader from "../../components/loader/Loader";
 import { getFirestore, doc, getDoc } from "firebase/firestore"; //
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
-  // const [loading, setLoading] = useState(true);
+  const [loader, setLoader] = useState(true); //  This State is used to generate the spinner
 
   const db = getFirestore();
 
@@ -28,10 +28,17 @@ const ItemDetailContainer = () => {
     getProducts();
   }, [id]);
 
+  useEffect (() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 2500)
+  })
+  
   return (
     <div>
-      {product ? <ItemDetail product={product} /> : <h1>loading...</h1>}
-      {/* <> {loading ? <Loader /> : <ItemDetailList product={itemDetail} />} </> */}
+       {/* {loader ? <Loader/> : <ItemList lista={itemList} /> } */}
+      {/* {product ? <ItemDetail product={product} /> : <h1>loading...</h1>} */}
+       {loader ? <Loader /> : <ItemDetail product={product} />}
     </div>
   );
 };

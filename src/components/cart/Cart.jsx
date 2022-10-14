@@ -1,4 +1,6 @@
 import "./style.css";
+import dri from '../../img/dri.gif'
+
 import { useContext, useState } from "react";
 import { CartContext,  } from "../../context/CartContext";
 import { NavLink } from "react-router-dom";
@@ -14,40 +16,44 @@ import { useNavigate } from "react-router-dom";
 
 
 const Cart = () => {
+  const { cart, TotalInCart, removeItem, clear, setItemsState } = useContext(CartContext);
   const navigate = useNavigate();
   const [order, setOrder] = useState({
     buyer: {
-      name: "miau",
-      phone: "12121212121",
-      email: "miaumiau@miau.com",
+      name: "",
+      phone: "",
+      email: "",
     },
-    items: [],
-    total: 0,
-    date: "",
+    items: cart,
+    total: cart.reduce((acc, item) => acc + item.price * item.quantity, 0),
+    date: moment().format("DD/MM/YYYY, h:mm:ss a")
   });
 
-  const { cart, TotalInCart, removeItem, clear } = useContext(CartContext);
   const db = getFirestore();
-
   const createOrder = () => {
-    setOrder((currentOrder) => {
-      return {
-        ...currentOrder,
-        items: cart,
-        total: cart.reduce((acc, item) => acc + item.price * item.quantity, 0),
-        date: moment().format("DD/MM/YYYY, h:mm:ss a"),
-      };
-    });
+
+    // setOrder((currentOrder) => {
+    //   return {
+    //     ...currentOrder,
+    //     items: cart,
+    //     total: cart.reduce((acc, item) => acc + item.price * item.quantity, 0),
+    //     date: moment().format("DD/MM/YYYY, h:mm:ss a"),
+    //   };
+    // });
     
     const query = collection(db, "orders");
     addDoc(query, order)
       .then(({ id }) => {
-        console.log({ id });
-        updateStockProduct();
-        alert("lista la compra");
+        console.log(id);
+        updateStockProduct(cart);
+        alert(`Felicidades ${nombreUsuario} por tu compra.
+        Tu nro de orden es: ${id}`);
       })
-      .catch(() => console.log("error al finalizar la orden"));
-  };
+
+
+      .catch(() => alert(`Error al realizar la compra, intentelo de nuevo mas tarde`)
+      )
+    };
 
   const updateStockProduct = () => {
     cart.forEach((product) => {
@@ -60,12 +66,12 @@ const Cart = () => {
         shortdescription: product.shortdescription,
         stock: product.stock - product.quantity,
         title: product.title,
-        
-      })
+        })
         .then(() => {
           if (cart[cart.length -1].id === product.id){
           console.log("Se actualizo el stock");
           clear();
+          clear();setItemsState(0);
           navigate('/')
           }
         })
@@ -75,93 +81,139 @@ const Cart = () => {
     });
   };
 
+  //SetOrder
+
+  const handleInputChange = (e) => {
+
+    setOrder({
+        ...order,
+        buyer: {
+            ...order.buyer,
+            [e.target.name]: e.target.value,
+        }
+    });
+};
+
+let nombreUsuario = order.buyer.name;
+// console.log(nombreUsuario);
+
+
+
   return (
     <>
-      <div className="cart-container container  ">
-        <div className="cart-header row ">
-          <h2 className="col-11"> CARRITO</h2>
-        </div>
-        {cart.length === 0 ? (
+      
+
+        {cart.length === 0 ? 
+//Si el carrito esta vacio      
+        (
           <>
-            <h2>No hay productos bro</h2>
+            <h2 className="cart_title">Aún no hay productos en el carrito!</h2>
+            <div className="cart_empty col-12">
+            <img src={dri} alt="dri"/>
+            
             <NavLink to={"/products"}>
-              <button className="col-12 btn btn-lg btn-outline-warning justify-content-md-end">
-                Ir a comprar
+              <button className="col-10 btn btn-outline-warning ">
+                <strong>IR A COMPRAR</strong>
               </button>
             </NavLink>
+            </div >
           </>
-        ) : (
+        ) : 
+//Si el carrito tiene productos         
+        (
+          <div className="container_card">
           <>
-            {cart.map((product) => (
+          <div className=" cart_container">
+            
+        {cart.map((product) => (
               <div key={product.id}>
-                <div className="cart-content list-group ">
-                  <ul className="list-group">
-                    <li className="list-group-item">
-                      <div className="container text-center">
-                        <div className="row gap-2 col-12 mx-auto">
-                          <h3 className="col col-4">{product.title}</h3>
-                          <div className="col-md-auto">
-                            <img
-                              style={{ width: "150px" }}
-                              src={product.img}
-                              className="img-fluid rounded mx-auto d-block"
-                              alt={product.title}
-                            />
-                          </div>
-                          <h5 className="col col-3">
-                            <strong>$ </strong> {product.price}
-                          </h5>
-                          <h5 className="col col-3">
-                            <strong>Cantidad: </strong>
-                            {product.quantity}
-                          </h5>
 
-                          <h5 className="col-md-4">
-                            <strong>Subtotal:</strong>$
-                            {product.quantity * product.price}
-                          </h5>
-                          <div className="col-md-5"></div>
-                          <button
-                            className=" btn btn-danger col-md-2"
-                            onClick={() => removeItem(product.id)}
-                          >
-                            Eliminar
-                          </button>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                <div className="card_product">
+                  <h3>{product.title}</h3>
+                  <div className="product_content">
+
+                    <div className="product_img">
+                    <img
+                      style={{ width: "150px" }}
+                      src={product.img}
+                      className="img-fluid rounded mx-auto d-block"
+                      alt={product.title}
+                    />
+                    </div>
+
+                    <div className="product_data">
+
+                      <p><span>Cantidad: </span><strong>{product.quantity}</strong></p>
+                      <p><span>Precio x U: $</span><strong>{product.price}</strong></p>
+                    </div>
+
+                    <div className="product_end">
+                    <p><span>Subtotal: $</span><strong>{product.quantity * product.price}</strong></p>
+                    <button
+                      className=" btn btn-danger"
+                      onClick={() => removeItem(product.id)}
+                    >
+                      Eliminar
+                    </button>
+                    </div>
+
+                  </div>
                 </div>
+
               </div>
             ))}
-          </>
-        )}
-        <div className="cart-footer col-12 mx-auto mb-5 ">
-          <div>
-            <h4 className="text-warning ">TOTAL: ${TotalInCart()}</h4>
           </div>
-          <div>
-            <NavLink to={"/products"}>
-              <button className="btn btn-primary col col-lg-3 me-2">
-                Ver mas productos
-              </button>
-            </NavLink>
-            <button
-              onClick={createOrder}
-              className="btn btn-outline-success col col-lg-5 me-2"
-            >
-              Finalizar Compra
-            </button>
+          
+          
+            
+
+            <div className="fin-tr">
+
+            
+            <h4 className="text-warning ">TOTAL: ${TotalInCart()}</h4>
+
+          
+              <p className="order-style">Complete los datos de la orden de compra:</p>
+            
+          
+              
+            <div className="formFlex">
+             <input className="input" name="name" type="text" placeholder="Nombre" value={order.buyer.name} onChange={handleInputChange} />
+            
+            <input className="input" name="phone" type="phone" placeholder="Phone" value={order.buyer.phone} onChange={handleInputChange} />
+             
+             <input className="input" name="email" type="email" placeholder="Email" value={order.buyer.email} onChange={handleInputChange} />
+             
+        </div> 
 
             <button
               onClick={clear}
-              className="btn btn-warning col col-lg-3 me-2"
+              className="btn btn-warning me-2"
             >
               Limpiar carrito
             </button>
-          </div>
+            
+            <button
+              onClick={createOrder}
+              className="btn btn-outline-success"
+            >
+              Finalizar Compra
+            </button>
+  
+            </div>
+        
+
+        <NavLink to={"/products"}>
+              <button className="btn btn-primary">
+                Ver más productos
+              </button>
+            </NavLink>
+
+        </>
         </div>
-      </div>
+        
+        )}
+      
     </>
   );
 };
