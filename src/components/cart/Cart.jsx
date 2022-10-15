@@ -1,6 +1,7 @@
 import "./style.css";
 import dri from '../../img/dri.gif'
-
+import addoncart from '../../img/addoncart.gif'
+import Swal from 'sweetalert2'
 import { useContext, useState } from "react";
 import { CartContext,  } from "../../context/CartContext";
 import { NavLink } from "react-router-dom";
@@ -46,8 +47,22 @@ const Cart = () => {
       .then(({ id }) => {
         console.log(id);
         updateStockProduct(cart);
-        alert(`Felicidades ${nombreUsuario} por tu compra.
-        Tu nro de orden es: ${id}`);
+        Swal.fire({
+          icon: 'success',
+              imageUrl: `${addoncart}`,
+              imageWidth: 300,
+              imageHeight: 200,
+              imageAlt: 'Custom image',
+          title: `'Gracias ${nombreUsuario}!!'`,
+          text: `'Felicidades por tu compra. Tu nro de orden es: ${id}'`,
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        })
+    
       })
 
 

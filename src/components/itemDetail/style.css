@@ -7,7 +7,9 @@
     height: 85vh;
 }
 .item-image {
-    padding: 20px 1px;
+    width: 55%;
+    margin: 15px 80px;
+    text-align: center;
 }
 .item-image p {
     font-size: 1.3rem;

@@ -112,8 +112,8 @@ const methods = () => {
         <div data-aos="zoom-in-up" data-aos-duration="2000">
           <img
             className="aboutus_img"
-            src="http://d2r9epyceweg5n.cloudfront.net/stores/001/259/541/products/chemex-021-0ab5a8c2b037dea05815907745589067-1024-10241-1eb92fa93eb23a1b2b15945098794038-640-0.png"
-            alt="chemex"
+            src="https://st.kofio.co/img_product/igWQdvM9LJoUnB1/225/sq_nUPeEukZD5z0Fxg6Y87O_84.jpg"
+            alt="aeropress"
           />
         </div>
       </div>

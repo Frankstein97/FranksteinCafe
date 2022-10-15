@@ -102,7 +102,7 @@ const SectionProducts = () => {
           </p>
         </div>
         <div>
-          <Link to={"category/Filtrados"}>
+          <Link to={"/methods"}>
             <div className="d-grid col-6 mx-auto mb-4">
               <button className="section_button btn btn-dark" type="button">
                 ◅ IR A VER ▻

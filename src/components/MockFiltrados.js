@@ -1,4 +1,6 @@
- const data = [
+//Este mock fue creado como practica y ahora como respaldo de los datos ficticios cargados en firebase
+
+const data = [
     // {
     //     id:'1',
     //     title: 'Cafe Guatemala 1/4kg',
@@ -7,7 +9,7 @@
     //     description: 'Es considerado un café suave y agradable, conocido a nivel internacional como Prime y Extra Prime. En las zonas intermedias, entre 1.070 a 1.200 metros sobre el nivel del mar, las calidades aumentan. El café de esta altura es conocido como Semiduro y Duro.',
     //     category: 'Productos',
     //     stock: 28,
-    //     img: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/636/304/products/101-bb46b0d3d33fd3334316580141818184-640-0.png',
+    //     img: 'https://latinafy.com/images/detailed/26/puerto-blest-guatemala-bourbon-honey-250-g-1.jpg',
     // },
     // {
     //     id:'2',
@@ -27,7 +29,7 @@
     //     description: ' El café peruano se produce en 350.000 hectáreas de cafetales en 210 distritos rurales ubicados en 10 departamentos de la vertiente oriental de los Andes, siendo las regiones de Amazonas, San Martín y Chanchamayo, las tres áreas principales de cultivo. Del café peruano, los consumidores aprecian su sabor suave, ligeramente dulce, su buen cuerpo y su aroma delicado, que lo han hecho merecedor de numerosos re- conocimientos en concursos de calidad y campeonatos baristas de todo el mundo.',
     //     category: 'Productos',
     //     stock: 92,
-    //     img: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/636/304/products/bistrea-web-72-33204809f0e87339d016595716888325-320-0.png'
+    //     img: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/636/304/products/311-e85dbf56a733bb42d516580147630562-640-0.png'
     // },
     // {
     //     id:'4',
@@ -37,7 +39,7 @@
     //     description: ' El café peruano se produce en 350.000 hectáreas de cafetales en 210 distritos rurales ubicados en 10 departamentos de la vertiente oriental de los Andes, siendo las regiones de Amazonas, San Martín y Chanchamayo, las tres áreas principales de cultivo. Del café peruano, los consumidores aprecian su sabor suave, ligeramente dulce, su buen cuerpo y su aroma delicado, que lo han hecho merecedor de numerosos re- conocimientos en concursos de calidad y campeonatos baristas de todo el mundo.',
     //     category: 'Productos',
     //     stock: 20,
-    //     img: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/636/304/products/71-50613efc8bf418c5c816580170373698-320-0.png'
+    //     img: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/636/304/products/311-e85dbf56a733bb42d516580147630562-640-0.png'
     // },
     // {
     //     id:'5',
@@ -47,7 +49,7 @@
     //     description: 'Es considerado un café suave y agradable, conocido a nivel internacional como Prime y Extra Prime. En las zonas intermedias, entre 1.070 a 1.200 metros sobre el nivel del mar, las calidades aumentan. El café de esta altura es conocido como Semiduro y Duro.',
     //     category: 'Productos',
     //     stock: 10,
-    //     img: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/636/304/products/311-e85dbf56a733bb42d516580147630562-640-0.png'
+    //     img: 'https://latinafy.com/images/detailed/26/puerto-blest-guatemala-bourbon-honey-250-g-1.jpg'
     // },
 
 // CAFE Por KG
@@ -59,7 +61,7 @@
     //     description: 'Es considerado un café suave y agradable, conocido a nivel internacional como Prime y Extra Prime. En las zonas intermedias, entre 1.070 a 1.200 metros sobre el nivel del mar, las calidades aumentan. El café de esta altura es conocido como Semiduro y Duro.',
     //     category: 'Productos',
     //     stock: 42,
-    //     img: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/636/304/products/101-bb46b0d3d33fd3334316580141818184-640-0.png',
+    //     img: 'https://latinafy.com/images/detailed/26/puerto-blest-guatemala-bourbon-honey-250-g-1.jpg',
     // },
     // {
     //     id:'52',
@@ -79,7 +81,7 @@
     //     description: ' El café peruano se produce en 350.000 hectáreas de cafetales en 210 distritos rurales ubicados en 10 departamentos de la vertiente oriental de los Andes, siendo las regiones de Amazonas, San Martín y Chanchamayo, las tres áreas principales de cultivo. Del café peruano, los consumidores aprecian su sabor suave, ligeramente dulce, su buen cuerpo y su aroma delicado, que lo han hecho merecedor de numerosos re- conocimientos en concursos de calidad y campeonatos baristas de todo el mundo.',
     //     category: 'Productos',
     //     stock: 23,
-    //     img: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/636/304/products/bistrea-web-72-33204809f0e87339d016595716888325-320-0.png'
+    //     img: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/636/304/products/311-e85dbf56a733bb42d516580147630562-640-0.png'
     // },
     // {
     //     id:'54',
@@ -99,7 +101,7 @@
     //     description: 'Es considerado un café suave y agradable, conocido a nivel internacional como Prime y Extra Prime. En las zonas intermedias, entre 1.070 a 1.200 metros sobre el nivel del mar, las calidades aumentan. El café de esta altura es conocido como Semiduro y Duro.',
     //     category: 'Productos',
     //     stock: 12,
-    //     img: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/636/304/products/311-e85dbf56a733bb42d516580147630562-640-0.png'
+    //     img: 'http://qualitytime.ar/wp-content/uploads/2022/08/Guatemala_Caturra.jpg'
     // },
 
 
@@ -184,6 +186,34 @@
     //     description: 'El filtro de café se trata de un utensilio de cocina que tiene la función de filtrar el agua caliente de los granos molidos del café para la elaboración del café bebido',
     //     stock: 16,
     //     img: 'https://cdn11.bigcommerce.com/s-abmjjefojj/images/stencil/1280x1280/products/3314/13433/Filtro-Cafe-Tela-Argentina_Select-1000x1000__94579.1610660283.jpg?c=1'
+    // },
+        // {
+    //     id:'1010',
+    //     title: 'Te de Rosa Mosqueta',
+    //     price: '1300',
+    //     category: 'te',
+    //     shortdescription: "Te Seresi en hebras, mix de hierbas a base de te rojo y rosa mosqueta  ", 
+    //     description: 'Todo el poder de La Patagonia en un solo blend: Té rojo, rosa mosqueta, melisa, pétalos de rosa, lavanda, y cardamomo. Un clásico de Seresi.',
+    //     stock: 45,
+    //     img: 'https://seresi.com.ar/wp-content/uploads/2019/07/patagonio.jpg'
+    // },
+    //     id:'1010',
+    //     title: 'Te de Menta con Limon ',
+    //     price: '1300',
+    //     category: 'te',
+    //     shortdescription: "Te Seresi en hebras, Te negro con limon y menta en una combinacion única", 
+    //     description: 'Producto Te negro de limón y menta. Presentación 80g Marca Seresi, Patagonia. Detalle Mezcla de té negro, menta y limón.',
+    //     stock: 41,
+    //     img: 'http://d2r9epyceweg5n.cloudfront.net/stores/001/421/535/products/seresi_te-negro-menta-limon_80g-1060x10601-5cfc91dd2b7f12a43a16064145273288-640-0.jpg '
+    // },
+    //     id:'1010',
+    //     title: 'Te Pampa Chai     ',
+    //     price: '1400',
+    //     category: 'te',
+    //     shortdescription: "Te Seresi en hebras, Te negro y especias.", 
+    //     description: 'Jengibre, cardamomo, vainilla, clavo de olor y canela. Té en hebras Panpa Chai x 80 grs. Hacé tu pedido y pagalo online.',
+    //     stock: 86,
+    //     img: 'http://d2r9epyceweg5n.cloudfront.net/stores/450/029/products/seresi-pampa-chai-adelante1-251ebd47e1424dde8216311709507668-640-0.jpg'
     // },
 ]
 export default data
