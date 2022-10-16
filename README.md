@@ -11,15 +11,18 @@ Aqui podras ver cada una de las paginas que componen la app
 ## Fue construido con: 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ###
-Utilizando 
+Utilizando
+###
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ###
-Y la base de datos 
+Y la base de datos:
+###
 ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
 ###
 Además:
+###
 Utilice hooks de react para la funcionalidad (useMemo, useParams, ReactRouter)
 Y librerias externas como bootstrap, Aos y SweetAlert2 para darle mas estilo!.
 
