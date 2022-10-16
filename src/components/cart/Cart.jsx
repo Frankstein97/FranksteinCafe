@@ -66,7 +66,12 @@ const Cart = () => {
       })
 
 
-      .catch(() => alert(`Error al realizar la compra, intentelo de nuevo mas tarde`)
+      .catch(() => Swal.fire({
+        icon: 'error',
+        title: 'cuack!',
+        text: 'Error al realizar la compra, intentelo de nuevo mas tarde',
+       
+      })
       )
     };
 
