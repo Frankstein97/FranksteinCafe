@@ -5,7 +5,8 @@ Tambien es una manera de mostrar lo que se sobre cafeteria de especialidad,
 En el futuro quiero volver a verla y recordar que antes de ser desarrollador fui barista
 
 ## Demo de la App:
-Aqui podras ver cada una de las paginas que componen la app 
+Aqui podras ver cada una de las paginas que componen la app
+###
 ![Demo de la App](https://github.com/Frankstein97/FranksteinCafe/blob/main/src/img/demoapp.gif)
         
 ## Fue construido con: 
@@ -24,9 +25,11 @@ Y la base de datos:
 Además:
 ###
 Utilice hooks de react para la funcionalidad (useMemo, useParams, ReactRouter)
+###
 Y librerias externas como bootstrap, Aos y SweetAlert2 para darle mas estilo!.
 
 ## Demo de una compra:
+###
 Aqui podras ver el recorrido de una compra desde la seleccion de productos hasta la obtencion de numero de seguimiento.  
 ![Demo de Compra](https://github.com/Frankstein97/FranksteinCafe/blob/main/src/img/democompra.gif)
 
