@@ -93,6 +93,7 @@ font-size: 25px;
         text-align: center;
     }
     .card-description {
-        margin: 1rem;
+        padding: 1rem;
+        margin-left: -0.5rem;
     }
 }
