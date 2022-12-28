@@ -26,25 +26,3 @@
 
 ![Demo de Compra](https://github.com/Frankstein97/FranksteinCafe/blob/main/src/img/democompra.gif)
 ---
-<!-- GETTING STARTED -->
-
-## Getting Started
-To get a local copy up and running follow these simple example steps.
-### Prerequisites
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
-### Installation
-1. Clone the repo
-   ```sh
-   git clone https://github.com/falchon100/EscondidoBeer-AngelSanluis.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-3. Run the APP
-   ```js
-   npm start;
-   ```
